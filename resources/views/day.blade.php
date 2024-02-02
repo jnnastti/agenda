@@ -38,7 +38,9 @@
                 <!-- Coluna centralizada para #humor-dia -->
                 <div id="humor-dia" class="col-md-4 text-center">
                     <h3 class="text-primary">Humor do dia</h3>
-
+                    <form action="dia/salvar" method="post">
+                        @csrf
+                    </form>
 
                     <h3 class="text-primary">Água</h3>
                     <!-- Outro conteúdo de #humor-dia aqui -->

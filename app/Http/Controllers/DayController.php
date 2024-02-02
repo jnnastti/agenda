@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Day;
 use Illuminate\Http\Request;
 
 class DayController extends Controller
@@ -15,5 +16,17 @@ class DayController extends Controller
         return view('day', [
             'usuario' => "Janna"
         ]);
+    }
+
+    public function store(Request $request)
+    {
+        $humor = $request->input('humor');
+
+        $dia = new Day();
+
+        $dia->humor = $humor;
+        $dia->save();
+
+        return redirect('/dia');
     }
 }

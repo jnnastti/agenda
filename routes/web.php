@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/dia', [DayController::class, 'index']);
+Route::post('/dia/salvar', [DayController::class, 'store']);
